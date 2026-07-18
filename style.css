@@ -1,0 +1,187 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#fff;
+color:#111;
+}
+
+/* Header */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 60px;
+background:rgb(255, 255, 255);
+z-index:1000;
+border-bottom:1px solid #ffffff;
+}
+
+.okito{
+color: #000000;
+font-size: 12px;
+}
+
+.logo{
+font-size:34px;
+font-weight:bold;
+letter-spacing:8px;
+}
+
+nav{
+display:flex;
+gap:40px;
+}
+
+nav a{
+text-decoration:none;
+color:#111;
+font-size:15px;
+transition:.3s;
+}
+
+nav a:hover{
+opacity:.5;
+}
+
+.icons{
+font-size:24px;
+display:flex;
+gap:20px;
+cursor:pointer;
+}
+
+/* Hero */
+
+.hero{
+margin-top:80px;
+height:100vh;
+background:url("lun1.jpeg") center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+}
+
+.overlay{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(12px);
+padding:60px;
+text-align:center;
+}
+
+.overlay h1{
+font-size:70px;
+letter-spacing:8px;
+font-weight:300;
+margin-bottom:20px;
+}
+
+.overlay p{
+font-size:18px;
+letter-spacing:4px;
+margin-bottom:30px;
+}
+
+button{
+padding:18px 50px;
+border:1px solid black;
+background:white;
+cursor:pointer;
+font-size:15px;
+transition:.4s;
+}
+
+button:hover{
+background:black;
+color:white;
+}
+
+/* Collection */
+
+@media (max-width:768px){
+
+.collection{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(150px, 1fr));
+    gap:12px;
+}
+
+}
+
+.card{
+background:white;
+text-align:center;
+transition:.4s;
+}
+
+.card img{
+width:80%;
+height:450px;
+object-fit:cover;
+}
+
+.card h2{
+margin-top:10px;
+font-size:20px;
+font-weight:400;
+}
+
+.card p{
+margin:18px;
+color:#000000;
+font-size: 12px;
+}
+
+.card span{
+font-size:20px;
+font-weight:bold;
+}
+
+.oldprice{
+text-decoration: line-through;
+color: gray;
+margin: 10px;
+}
+
+.card:hover{
+transform:translateY(-1px);
+}
+
+@media(max-width:768px){
+
+header{
+padding:20px;
+}
+
+nav{
+display:none;
+}
+
+.logo{
+font-size:26px;
+}
+
+.overlay h1{
+font-size:42px;
+}
+
+.overlay{
+padding:30px;
+}
+
+.card img{
+height:200px;
+}
+
+}
